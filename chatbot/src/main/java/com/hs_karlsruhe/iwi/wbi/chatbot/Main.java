@@ -57,7 +57,7 @@ public class Main {
 		System.out.print("Me \t> ");
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		String line = "";
-		
+
 		while (true) {
 			line = in.readLine();
 			if (line.equalsIgnoreCase("quit")) {

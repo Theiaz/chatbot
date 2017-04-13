@@ -1,8 +1,6 @@
 package com.hs_karlsruhe.iwi.wbi.chatbot;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
@@ -22,11 +20,11 @@ import ai.api.model.AIResponse;
 public class Receiver {
 
 	private static Logger logger = LoggerFactory.getLogger(Receiver.class);
-	
+
 	private Channel channel;
 	private String message;
 	private String accessToken;
-	//API.ai
+	// API.ai
 	private AIConfiguration configuration;
 	private AIDataService dataService;
 
@@ -61,9 +59,8 @@ public class Receiver {
 		configuration = new AIConfiguration(accessToken);
 		dataService = new AIDataService(configuration);
 	}
-	
-	private void sendRequestToApiAI()
-	{
+
+	private void sendRequestToApiAI() {
 		try {
 			AIRequest request = new AIRequest(message);
 			AIResponse response = dataService.request(request);
