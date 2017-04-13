@@ -2,13 +2,18 @@ package com.hs_karlsruhe.iwi.wbi.chatbot;
 
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.rabbitmq.client.Channel;
 
-public class Send {
+public class Sender {
 
-	Channel channel;
+	private static Logger logger = LoggerFactory.getLogger(Sender.class);
 
-	public Send(Channel channel) {
+	private Channel channel;
+
+	public Sender(Channel channel) {
 		this.channel = channel;
 	}
 
@@ -18,7 +23,7 @@ public class Send {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("[x] Sent '" + message + "'");
+		logger.debug("[x] Sent '" + message + "'");
 	}
 
 }
