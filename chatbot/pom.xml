@@ -31,5 +31,10 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.25</version>
 		</dependency>
+		<dependency>
+			<groupId>ai.api</groupId>
+			<artifactId>libai</artifactId>
+			<version>1.4.8</version>
+		</dependency>
 	</dependencies>
 </project>
